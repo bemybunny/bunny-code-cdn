@@ -1,0 +1,234 @@
+<style>
+  .custom-footer {
+    margin: 0 auto;
+    text-align: center;
+    color: #666;
+    line-height: 1.8;
+    padding: 4rem 2rem 3rem;
+  }
+
+  .custom-footer-menu {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: EB Garamond, Apple SD Gothic Neo, Malgun Gothic, Nanum Gothic, Meiryo, serif, Arial, sans-serif;
+    color: #5a5a5a;
+    text-transform: uppercase;
+  }
+
+  .custom-footer-menu a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+  }
+
+  /* 사업자 정보 */
+  .custom-footer-info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem auto !important;
+    padding: 0 1rem !important;
+    max-width: 1000px;
+  }
+
+  .custom-footer-info .info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    line-height: 1.4;
+  }
+
+  .custom-footer-info .info-row span {
+    white-space: nowrap;
+  }
+
+  .custom-footer-info li:first-child,
+  .custom-footer-info li:last-child {
+    flex-wrap: nowrap;
+  }
+
+  .custom-footer-info li:last-child span {
+    white-space: nowrap;
+  }
+
+  /* 하단 링크 */
+  .custom-footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 2rem;
+    list-style: none;
+    padding: 0 !important;
+    margin: 2rem 0 1rem !important;
+  }
+
+  .custom-footer-links li {
+    margin: 0;
+  }
+
+  .custom-footer-links a {
+    text-decoration: none;
+    color: #888;
+    transition: color 0.2s;
+  }
+
+  .custom-footer-links a:hover {
+    color: #000;
+  }
+
+  /* 저작권 */
+  .custom-footer-copyright {
+    color: #aaa;
+    margin-top: 0.5rem;
+  }
+
+
+
+
+/* ✅ 834px 이하: 기본적인 줄 나눔 시작 (wrap 중심) */
+/* ✅ 834px 이하: 일반 태블릿 대응 */
+@media (max-width: 834px) {
+  .custom-footer-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem 2.4rem;
+  }
+
+  .custom-footer-info .info-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.6rem;
+    text-align: center;
+  }
+
+  .custom-footer-info li:last-child {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .custom-footer-info li:last-child span {
+    white-space: normal;
+  }
+
+  .custom-footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 2rem;
+  }
+}
+
+/* ✅ 640px 이하: 좁은 모바일 대응 (여백 축소 + 2열 유지) */
+@media (max-width: 640px) {
+  .custom-footer-menu {
+    gap: 1rem 2rem;
+  }
+
+  .custom-footer-info .info-row {
+    gap: 0.5rem 1.2rem;
+  }
+
+  .custom-footer-links {
+    gap: 0.3rem 1.2rem;
+  }
+
+  .custom-footer-info {
+    padding: 0 1rem !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .custom-footer-menu {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    padding: 0 1rem !important;
+    font-size: 1.1rem !important;
+    white-space: nowrap;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+  }
+
+  .custom-footer-menu li {
+    flex: 1 1 0;
+    text-align: center;
+  }
+
+  .custom-footer-menu a {
+    display: inline-block;
+    width: 100%;
+    padding: 0.4rem 0;
+  }
+
+  .custom-footer-info .info-row {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.4rem 1rem;
+  }
+
+  .custom-footer-info li:last-child {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .custom-footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.4rem;
+  }
+}
+
+
+</style>
+<div class="custom-footer">
+    <!-- 상단 메뉴 -->
+    <ul class="custom-footer-menu">
+        <li><a href="/shop-all">SHOP</a></li>
+        <li><a href="/new-all">NEW</a></li>
+        <li><a href="QA">Q&A</a></li>
+        <li><a href="/Notice">NOTICE</a></li>
+    </ul>
+
+    <!-- 사업자 정보 -->
+    <ul class="custom-footer-info">
+        <li class="info-row">
+            <span><strong>버니블러쉬</strong></span>
+            <span><strong>대표자</strong> 김혜경 | 오유경</span>
+            <span><strong>사업자등록번호</strong> 612-50-01317</span>
+            <span><strong>통신판매업신고</strong> 간이과세자</span>
+        </li>
+        <li class="info-row">
+            <span><strong>대표전화</strong> 010-4110-6854</span>
+            <span><strong>주소</strong> 인천 남동구 남동대로 765번길 17, 3층 301호</span>
+        </li>
+        <li class="info-row">
+            <span><strong class="-label">개인정보보호책임자</strong></span>
+            <span>
+                <a href="mailto:kleesier@naver.com">김혜경(bunnyblush831@naver.com)</a>
+            </span>
+        </li>
+    </ul>
+    <!-- 푸터 링크 -->
+    <ul class="custom-footer-links">
+        <li><a href="https://bunnyblush.imweb.me/?mode=policy">이용약관</a></li>
+        <li><a href="https://bunnyblush.imweb.me/?mode=privacy">개인정보처리방침</a></li>
+        <li><a href="https://instagram.com/bunnyblush.kr" target="_blank">Instagram</a></li>
+    </ul>
+
+    <!-- 저작권 -->
+    <div class="custom-footer-copyright">
+        © Bunny Blush. All rights reserved.
+    </div>
+</div>

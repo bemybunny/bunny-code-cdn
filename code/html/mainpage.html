@@ -1,28 +1,11 @@
 <style>
-  @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
-  /* 러브알람 */
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
-  /* 하트메뉴 */
-  @import url("https://pro.fontawesome.com/releases/v5.15.4/css/all.css");
   @import url("https://dl.dropbox.com/s/8b5k49dsdc70urj/cappuccicons.css");
-
-  .fa-solid,
-  .fa-solid::before {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-    display: inline-block !important;
-  }
-
+  
   /* 공통 스타일링(코드 초기화) */
   a {
     text-decoration: none;
     color: inherit;
     display: block;
-  }
-  .fa {
-    position: relative;
-    font-family: "Font Awesome 5 Duotone" !important;
-    font-weight: 900;
   }
   .inside {
     padding: 0 !important;
@@ -32,6 +15,10 @@
   .col-dz-12 .extend_thumbs {
     padding: 0 !important;
   }
+  .doz_sys .inside .doz_row{
+    margin: 0;
+  }
+
 
   /* 아임웹 코드 초기화 */
   h1 {
@@ -53,12 +40,29 @@
     padding: 0 !important;
   }
 
+
   /* 버튼 초기화 */
   button {
     background: none;
     border: none;
     cursor: pointer;
   }
+
+  /* 정렬 class */
+  .img-center{
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  .img-left{
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  .img-right {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: right !important;
+  }
+
 
   /* keyframe */
   /* 뮤직 플레이어 키프레임 */
@@ -100,221 +104,58 @@
   }
 
 
-  .main-container{
-    overflow: hidden;
-  }
-  /* 뮤직 플레이어 */
-  .Bunny-music-wrapper {
-    display: flex;
-    justify-content: flex-end;
-  }
-  #bunny-music {
-    width: 300px;
-    height: 100px;
-    box-shadow: 0 0 3px rgba(25, 25, 25, 0.3);
-    border-radius: 10px;
-    position: relative;
-    top: 54% !important;
-    left: -4% !important;
-  }
-
-  #bunny-music-album {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    box-shadow: 0 0 2px rgba(25, 25, 25, 0.3);
-    background-size: cover;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 5%;
-    overflow: hidden;
-    position: absolute;
-  }
-
-  #bunny-music-album img {
-    width: 80px;
-    height: 80px;
-    filter: grayscale(100%);
-    background-size: cover;
-    border-radius: 10px;
-  }
-
-  .Bunny-music-bg {
-    width: 80px;
-    height: 80px;
-    background: rgba(245, 223, 232, 0.65);
-    border-radius: 10px;
-    position: absolute;
-    z-index: 2;
-  }
-
-  #bunny-music-title {
-    font: 19px "nunito";
-    font-weight: 700;
-    color: rgba(219, 191, 202);
-    text-transform: lowercase;
-    text-align: center;
-    top: 14%;
-    left: 68%;
-    transform: translateX(-50%);
-    position: absolute;
-  }
-
-  #bunny-music-title span.artist {
-    color: rgba(122, 122, 122);
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 1.6;
-    display: block;
-  }
-
-  #bunny-music-play {
-    right: 28%;
-    top: 46%;
-    position: absolute;
-  }
-
-  #bunny-music-rewind i {
-    color: rgba(122, 122, 122);
-    font-size: 14px;
-    left: 56%;
-    top: 63%;
-    transform: translateY(-50%);
-    z-index: 5;
-    position: absolute;
-  }
-
-  #bunny-music-ff i {
-    color: rgba(122, 122, 122);
-    font-size: 14px;
-    right: 20%;
-    top: 63%;
-    transform: translateY(-50%);
-    z-index: 5;
-    position: absolute;
-  }
-
-  #bunny-music-progress {
-    width: 120px;
-    height: 5px;
-    border-radius: 10px;
-    background: rgba(227, 225, 225, 0.8);
-    right: 12%;
-    bottom: 14%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    position: absolute;
-  }
-
-  #bunny-music-progress .duration {
-    position: absolute;
-    background-color: rgba(122, 122, 122);
-    width: 0px;
-    height: 5px;
-    border-radius: 15px;
-    animation: progres 200s infinite linear;
-  }
-
-  audio {
-    width: 100px;
-    height: 25px;
-    position: absolute;
-    right: 8%;
-    top: 63%;
-    transform: translateY(-50%);
-  }
-  audio::-webkit-media-controls-panel {
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
-  audio::-webkit-media-controls-enclosure {
-    background: transparent !important;
-  }
-
-  audio {
-    background-color: transparent;
-  }
-
-  audio::-webkit-media-controls-panel {
-    background: rgba(227, 225, 225, 0.3);
-  }
-
-  audio::-webkit-media-controls-timeline {
-    width: 100%;
-  }
-
-  audio::-webkit-media-controls-timeline,
-  audio::-webkit-media-controls-mute-button,
-  audio::-webkit-media-controls-timeline-container,
-  audio::-webkit-media-controls-current-time-display,
-  audio::-webkit-media-controls-time-remaining-display,
-  audio::-webkit-media-controls-timeline,
-  audio::-webkit-media-controls-volume-slider-container,
-  audio::-webkit-media-controls-volume-slider,
-  audio::-webkit-media-controls-seek-back-button,
-  audio::-webkit-media-controls-seek-forward-button,
-  audio::-webkit-media-controls-fullscreen-button,
-  audio::-webkit-media-controls-rewind-button,
-  audio::-webkit-media-controls-return-to-realtime-button,
-  audio::-webkit-media-controls-toggle-closed-captions-button {
-    display: none !important;
-  }
-
   /* 디어 다이어리 */
   :root {
-    --id-bg-color: 250, 230, 238;
-    --gr-bg-color: 255, 242, 247;
-    --gr2-bg-color: 242, 228, 233;
-    --oval-bg-color: 255, 255, 255;
-    --id-image-url: url("https://imgur.com/FTTWFCp.png");
-    --pola-image: url("https://imgur.com/oM86gvw.png");
-    --id-bg-color: 250, 230, 238;
     --template-font: "be vietnam";
   }
 
-  .main-graphic-wrapper {
+  .main-container{
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  #main-graphic-wrap {
     width: 100%;
-    padding: 150px 0;
+    margin: 7vh 0vh 10vh;
+  }
+
+  .main-graphic {
+    position: relative;
+    width: 768px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .graphic-group {
+    width: 100%;
   }
 
   .main-graphic-text {
     font-family: "Caveat", cursive !important;
     font-size: 2rem;
-    margin-top: 4rem !important;
+    padding-top: 4rem !important;
+    white-space: nowrap;
+  }
+  
+  .graphic-item-left {
+    width: 215px;
+    position: absolute;
+    transform: translate(-50%);
+    top: 2%;
+    left: 26%;
+    z-index: 8;
+  }
+  .graphic-item-btm{
+    width: 153px;
+    position: absolute;
+    transform: translate(-50%, -50%) scaleX(-1);
+    right: 19.5%;
+    bottom: 0%;
+    z-index: 9;
   }
 
-  #main-graphic {
-    position: relative;
-    width: 768px;
-    height: 450px;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  #graphic-group {
-    width: 100%;
-    height: 100%;
-  }
-    .graphic-item-left{
-      width: 215px;
-      position: absolute;
-      transform: translate(-50%);
-      top: 2%;
-      left: 26%;
-      z-index: 8;
-    }
-    .graphic-item-btm{
-      width: 145px;
-      position: absolute;
-      transform: translate(-50%);
-      left: 37.5%;
-      bottom: 0%;
-      z-index: 9;
-    }
-
-
-  #graphic-center {
+  .graphic-center {
     position: relative;
     width: 281px;
     height: 429px;
@@ -341,41 +182,37 @@
     border: solid 3px #f7eef1;
   }
 
-  #graphic-right {
-    width: 205px;
-    height: fit-content;
+  .graphic-right {
+    width: 290px;
     position: absolute;
-    top: 27%;
-    left: 81%;
-    bottom: 26%;
-    transform: translate(-50%);
-    /* background-image: -webkit-linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px);
-    background-size: 100% 2.5em; 
-    background-position: 0 1em; */
-    backdrop-filter: blur(1px); 
-    background-image: url("");
-    border-radius: 10px;
-    box-shadow: 0 0 2px rgba(140, 140, 140, 0.2);
-    transition: 0.3s;
+    top: 50%;
+    left: 79%;
+    transform: translate(-50%, -50%);
     z-index: 4;
   }
 
-  .graphic-right-lace {
+  .graphic-right-img{
     position: absolute;
-    width: 100%;
-    left: 0;
-  }
-  .graphic-right-lace:last-child {
-    bottom: 0;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
   }
 
+  /* 버니 어바웃 */
   .Bunny-about {
     position: relative;
     width: 100%;
     height: 100%;
     line-height: 25px !important;
     text-align: left;
-    left: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Bunny-about ul{
+    padding: 3rem 0 !important;
   }
 
   .Bunny-about li {
@@ -386,10 +223,13 @@
   }
 
   .Bunny-about li:first-child {
-    margin-top: 2rem;
+    margin-top: 0;
     font-family: 'send flowers' !important;
     font-size: 2.1rem;
     text-shadow: 0 0 4px rgba(140, 140, 140, 0.3);
+  }
+  .Bunny-about li:last-child{
+    margin-bottom: 0;
   }
 
   .Bunny-about li:before {
@@ -398,7 +238,7 @@
     margin-right: 3px;
   }
 
-  #Bunny-music {
+  .Bunny-music {
     width: 125px;
     height: 50px;
     background: rgba(255, 255, 255, 0.6);
@@ -413,7 +253,7 @@
   }
 
   .km-title {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: "montserrat" !important;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.5);
@@ -421,32 +261,32 @@
     letter-spacing: 1px;
     display: block;
     position: absolute;
-    left: 40%;
-    top: 32%;
+    left: 62%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    width: max-content;
   }
 
-  .km-title span.artist {
+  .km-title li.artist {
     font-family: "be vietnam" !important;
-    font-size: 6px;
+    font-size: 0.8rem;
     font-style: italic;
     text-transform: lowercase;
     display: block;
   }
 
   .mn {
+    display: flex;
     color: rgba(var(--gr2-bg-color));
     --fa-secondary-opacity: 0.9;
     font-size: 25px;
     position: absolute;
-    top: 13%;
-    left: 8%;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
   }
 
   /* 러브알람 */
-  :root {
-    --main-image: url("https://imgur.com/KsuXvIq.png");
-  }
-
   :root {
     --surface: #f9f9f9;
     --window-frame: #bfbfc0;
@@ -465,10 +305,6 @@
     --dialog-purple: #eaeaea;
   }
 
-  .Bunny-at-wrapper {
-    /* 모바일일 때 플렉스 정렬 */
-  }
-
   #Bunny-at {
     position: relative;
     width: fit-content;
@@ -476,69 +312,16 @@
     height: 360px;
   }
 
-  #Bunny-joy {
-    width: 280.8px;
-    height: 345.6px;
-    background-size: cover;
-    background-image: var(--main-image);
-    left: 0%;
-    top: 5%;
-    position: absolute;
-    z-index: 3;
-  }
-
-  .heart-one,
-  .heart-two,
-  .heart-three {
-    position: absolute;
-    z-index: 2;
-    font-size: 54px;
-    color: #f7cfe2;
-    filter: blur(4px);
-    animation: pink-gray 5s infinite;
-  }
-
-  .heart-one {
-    left: 5%;
-    bottom: 55%;
-    transform: rotate(-15deg);
-  }
-
-  .heart-two {
-    font-size: 180px;
-    color: #eaeaea;
-    filter: blur(6px);
-    z-index: 1;
-    top: 5%;
-    right: 3%;
-    animation: gray-pink 5s infinite;
-  }
-
-  .heart-three {
-    right: -4%;
-    bottom: 33%;
-    transform: rotate(15deg);
-  }
-
-  .heart {
-    font-family: "space mono";
-    color: #ecccea;
-    display: inline-block;
-    animation: flash 2s infinite;
-  }
-
   /* 📄 팝업창 */
   .window {
     width: 144px;
     font-family: "work sans";
-    font-size: 10.8px;
+    font-size: 1.1rem;
     padding: 6px;
     border-radius: var(--window-radius);
     background: var(--surface);
     box-shadow: var(--border-window-outer), var(--border-window-inner);
-    position: absolute;
-    right: 17%;
-    top: 42%;
+    display: none;
     z-index: 4;
   }
 
@@ -550,7 +333,7 @@
     );
     color: #fff;
     font-family: "space mono";
-    padding: 3.6px 2.4px 3.6px 3.6px;
+    padding: 3.6px 2.4px 3.6px 5.5px;
     display: flex;
     border-radius: var(--window-radius);
     justify-content: space-between;
@@ -603,7 +386,67 @@
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  /* 하트 메뉴 */
+
+
+  /* 오르골 */
+  #orgel-wrap{
+    /* margin: 2vh 0 0vh; */
+  }
+
+  .orgel{
+    position: relative;
+    /* height: 12vh; */
+  }
+  
+  .orgel-img{
+    width: 230px;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transform: translate(0, -50%);
+  }
+
+
+
+  /* 폴라로이드 */
+  #pola-wrap{
+    margin: 0vh 0 10vh;
+  }
+
+  .pola-img-wrap{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .pola-img{
+    position: relative;
+    width: 400px;
+    z-index: 7;
+  }
+
+  .pola-right{
+    position: absolute;
+    width: 264px;
+    transform: translate(-50%, -50%) scaleX(-1) rotate(3deg);
+    right: -67%;
+    top: 75%;
+    z-index: 8;
+  }
+
+  /* 퍼퓸 */
+  #perfume-wrap{
+    margin: 0 0 5vh;
+  }
+  .perfume-img{
+    width: 200px;
+    transform: rotate(-8deg) translate(-8%, -6%);
+  }
+
+
+
+    /* 하트 메뉴 */
   :root {
     --about-me-image: url("https://imgur.com/RjFEXnL.png");
     --fil-icon: url("https://68.media.tumblr.com/421db6e42805988f398ac776e6b0982a/tumblr_inline_oq3wvcUjLi1skr0w7_540.gif");
@@ -688,20 +531,7 @@
     padding: 12px 0px 10px 0px;
   }
 
-  .hearteu {
-    font-size: 308px;
-    background: rgba(233, 182, 200);
-    filter: blur(14px);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    left: 18%;
-    top: 0%;
-    transform: rotate(-15deg);
-    position: absolute;
-    z-index: -1;
-  }
-
-  .description span {
+  .description li {
     margin-right: 3px;
     font-size: 8px;
     animation: jello 1.3s infinite;
@@ -711,17 +541,231 @@
     color: var(--filler-accent-color);
   }
 
-  /* 태블릿 대응 (1024px 이하) */
-  @media (max-width: 1024px) {
+
+
+
+  /* 반응형 */
+  /* 대형 모니터 */
+  @media (max-width: 1920px){
+
   }
 
-  /* 일반 모바일 대응 (768px 이하) */
+  /* 대형 노트북, 외부 모니터 */
+  @media (max-width: 1600px){
+    .main-container{
+      max-width: 1280px;
+    }
+    #main-graphic-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      height: calc(100vh - 60px);
+      margin: 0;
+    }
+    
+    .orgel-img{
+      width: 220px;
+    }
+
+    #pola-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .pola-img{
+      width: 440px;
+    }
+
+    .pola-right{
+      transform: translate(-50%, 0%) scaleX(-1) rotate(3deg);
+      top: 59%;
+    }
+
+  }
+
+  /* 맥북 프로 14~16", 대형 노트북 */
+  @media (max-width: 1536px) {
+    /* MacBook Pro 대응 (실 CSS 뷰포트 기준) */
+    .pola-img{
+      width: 529px;
+    }
+  }
+
+  /* 맥북 에어, 13인치 노트북 */
+  @media (max-width: 1440px){
+    .orgel-img{
+      transform: translate(0, 0);
+    }
+    
+    .pola-wrap{
+      margin: 0vh 0 5vh;
+    }
+    .pola-img{
+      width: 370px;
+    }
+    .pola-right{
+      width: 252px;
+      top: 46%;
+    }
+  }
+
+  @media (max-width: 1280px){
+    .main-container{
+      padding: 0 8vw;
+    }
+    
+    .orgel-img{
+      width: 200px;
+    }
+
+    .pola-right{
+      width: 222px;
+      top: 55%;
+      right: -59%;
+    }
+    .perfume-img{
+      width: 162px;
+    }
+  }
+
+  /* 아이패드 Air / Pro 10.5 가로 정확 대응 */
+  @media (max-width: 1112px) {
+    .orgel-img{
+      width: 170px;
+    }
+
+    .perfume-img{
+      width: 155px;
+    }
+  }
+
+  /* 일반 태블릿 가로 (iPad 9~10세대 등) */
+  @media (max-width: 1024px) {
+    .main-container{
+      padding: 0 8vw;
+    }
+
+    #orgel-wrap{
+      margin: 0;
+    }
+    .orgel{
+      height: 14vh;
+      margin: 0 0 5vh;
+    }
+
+    #pola-wrap{
+      height: auto;
+      margin: 0 0 12vh;
+    }
+  }
+
+  /* 아이패드 세로 */
+  @media (max-width: 834px){
+    #main-graphic-wrap{
+      height: auto;
+      margin: 10vh 0 10vh;
+    }
+    .Bunny-music{
+      left: 5% !important;
+    }
+
+    .orgel-wrap{
+      margin: 0 0 22vh;
+    }
+    .orgel{
+      height: 3vh;
+      margin: 0 0 10vh;
+    }
+    .orgel-img{
+      margin: 0 7vw;
+      z-index: 8;
+    }
+
+    #pola-wrap{
+      margin: 0 0 5vh;
+      height: auto;
+    }
+    .pola-img{
+      width: 440px;
+    }
+    .pola-right{
+      width: 250px;
+    }
+
+    #perfume-wrap{
+      margin: 10vh 0 4vh;
+    }
+    .perfume-img{
+      width: 160px;
+    }
+  }
+
+  /* 모바일 시작점 */
   @media (max-width: 768px) {
+    .main-container{
+      padding: 0 5vw;
+    }
+    
+    /* 메인 그래픽 */
+    .graphic-item-left{
+      width: 208px;
+      top: 4%;
+      left: 23%;
+    }
+    .graphic-right{display: none !important;}
+    .graphic-item-btm{
+      width: 158px;
+      right: 10%;
+    }
+    .Bunny-music{
+      transform: translate(-50%, 0%);
+      left: 80% !important;
+      top: 27%;
+    }
+
+
+    /* 오르골 */
+    .orgel-wrap{
+      margin: 0;
+    }
+    .orgel{
+      height: 10vh;
+      margin: 0;
+    }
+    .orgel-img{
+      width: 162px;
+      z-index: 8;
+      margin: 0 3vw;
+    }
+
+
+    /* 폴라로이드 */
+    #pola-wrap{
+      margin: 0 0 9vh;
+    }
+    .pola-img{
+      width: 365px;
+    }
+    .pola-right{
+      width: 210px;
+      right: -56%;
+      top: 55%;
+    }
+
+    /* 퍼퓸 */
+    .perfume-img{
+      width: 135px;
+    }
+
     #Bunny-at {
       min-width: 340px;
       height: 300px;
     }
 
+    /*  */
     #Bunny-joy {
       width: 234px;
       height: 288px;
@@ -797,45 +841,173 @@
     }
   }
 
-  /* 소형 모바일 대응 (iPhone 13 mini 포함, 390px 이하) */
+  /* 소형 태블릿 세로, 대형 스마트폰 */
+  @media (max-width: 700px){
+    .graphic-item-btm{
+      width: 150px;
+      right: 5%;
+    }
+  }
+
+  /* 모바일 최적화 분기 시작 */
+  @media (max-width: 640px) {
+    /* #main-graphic-wrap{
+      margin: 5vh 0 5vh;
+    } */
+    .graphic-item-left{
+      width: 190px;
+      left: 18%;
+    }
+    .graphic-item-btm{
+      right: 3%;
+    }
+
+
+    .orgel{
+      height: 7vh;
+      margin: 0 0 3vh;
+    }
+    .orgel-img{
+      width: 140px;
+    }
+
+    #pola-wrap{
+      margin: 0 0 13vh;
+    }
+    .pola-right{
+      width: 190px;
+      height: auto;
+      right: -40%;
+      top: 64%;
+    }
+
+    .perfime-img{
+      width: 112px;
+    }
+  }
+
+  /* 일반 스마트폰 */
+  @media (max-width: 600px) {
+    .graphic-item-left{
+      width: 180px;
+      left: 17%;
+      top: 2%;
+    }
+
+    .graphic-item-btm{
+      width: 145px;
+      right: 0;
+    }
+
+  }
+
+  @media (max-width: 540px) {
+    .graphic-item-left{
+      width: 175px;
+      left: 18%;
+      top: 6%;
+    }
+    .graphic-item-btm{
+      right: -5%;
+    }
+
+    .pola-right{
+      width: 160px;
+      right: -30%;
+    }
+
+  }
+
+  /* 소형 모바일 시작 */
+  @media (max-width: 480px) {
+    .main-container{
+      padding: 0;
+    }
+    .graphic-item-left{
+      display: none; /* 임시로 작은화면에서 안보이게 */
+      width: 150px;
+      left: 18%;
+      top: 6%;
+    }
+    .graphic-item-btm{
+      width: 134px;
+      right: -13%;
+    }
+    
+    .orgel{
+
+    }
+    .orgel-img{
+      margin: 0;
+    }
+
+    .pola-img{
+      width: 330px;
+    }
+    .pola-right{
+      width: 155px;
+    }
+  }
+
+  /* 소형 모바일 */
+  @media (max-width: 414px) {
+    .graphic-item-left{
+      top: 2%;
+    }
+    .Bunny-music{
+      width: 115px;
+      height: 45px;
+      /* left: 70% !important;
+      top: 10%; */
+    }
+
+    .orgel{
+      height: 17vh;
+    }
+    .orgel-img{
+      width: 100px;
+    }
+
+    .pola-img{
+      width: 300px;
+    }
+
+    .perfume-img{
+      width: 80px;
+    }
+  }
+
+  /* iPhone 12~15 (390px 기준) */
   @media (max-width: 390px) {
+    .graphic-center{
+      width: 265px;
+      height: 404px;
+    }
+    .main-graphic-text{
+      padding-top: 3rem !important;
+    }
+    .graphic-item-btm{
+      right: -20%;
+    }
+
+    .pola-right{
+      width: 137px;
+      top: 66%;
+      right: -26%;
+    }
+  }
+
+  /* 초소형 모바일 (SE, 미니) */
+  @media (max-width: 375px) {
+
   }
 </style>
 <div class="main-container">
-  <!-- 뮤직 플레이어 -->
-  <div class="bunny-music-wrapper">
-    <div id="bunny-music">
-      <div id="bunny-music-album">
-        <div class="bunny-music-bg"></div>
-        <img
-          src="https://cdn.imweb.me/upload/S20250224fffb9afc22654/1945269f74c50.jpg"
-        />
-      </div>
-
-      <div id="bunny-music-title">
-        Position
-        <span class="artist">Ariana Grande</span>
-      </div>
-
-      <div id="bunny-music-rewind"><i class="fad fa-backward"></i></div>
-      <div id="bunny-music-play"></div>
-      <div id="bunny-music-ff"><i class="fad fa-forward"></i></div>
-
-      <audio controls loop controlsList="nodownload noplaybackrate">
-        <source src="" type="audio/mpeg" />
-      </audio>
-
-      <div id="bunny-music-progress">
-        <div class="duration"></div>
-      </div>
-    </div>
-  </div>
-
   <!-- 디어 다이어리 -->
-  <div class="main-graphic-wrapper">
-    <div id="main-graphic">
-      <div id="graphic-group">
-        <div id="graphic-center">
+  <div id="main-graphic-wrap">
+    <div class="main-graphic">
+      <div class="graphic-group">
+        <div class="graphic-center">
           <div class="graphic-center-img"></div>
         </div>
         <p class="main-graphic-text">
@@ -849,73 +1021,81 @@
             src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/jellycat.png"
             alt="jellycat"/>
         </div>
-        <div id="graphic-right">
-          <img
-            class="graphic-right-lace"
-            src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/lace-border-top.png"
-            alt="lace-border-top"
-          />
+        <div class="graphic-right">
+          <img class="graphic-right-img" src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/lace-frame-pk01.png" alt="graphic-right-img">
           <div class="Bunny-about">
             <ul style="list-style: none; padding-left: 0">
               <li>Princess Bunny</li>
               <li>pink thoughts only</li>
               <li>crush? always.</li>
-              <li style="font-family: 'send flowers' !important; font-size: 14px">
+              <li style="font-family: 'send flowers' !important; font-size: 16px">
                 pink princess<i>!</i>
               </li>
-              <li>
-                <span
-                  style="font-family: 'send flowers' !important; font-size: 12px"
-                  >... so dreamy ...</span
-                >
+              <li style="font-family: 'send flowers' !important; font-size: 16px">... so dreamy ...</li>
               </li>
               <li>soft heart, full cart</li>
             </ul>
           </div>
-          <img
-            class="graphic-right-lace"
-            src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/lace-border-btm.png"
-            alt="lace-border-btm"
-          />
         </div>
       </div>
-      <div id="Bunny-music">
-        <div class="mn"><i class="fad fa-music"></i></div>
+      <div class="Bunny-music">
+        <div class="mn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="40">
+            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path fill="#f7dce1" d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/>
+          </svg>
+        </div>
         <div class="km-title">
-          lucky <span class="artist">britney spears</span>
+          lucky <li class="artist">britney spears</li>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 러브알람 -->
-  <div class="Bunny-at-wrapper">
-    <div id="Bunny-at">
-      <div class="heart-one"><i class="cp cp-heart"></i></div>
-      <div class="heart-two"><i class="cp cp-heart"></i></div>
-      <div class="heart-three"><i class="cp cp-heart"></i></div>
-      <div id="Bunny-joy"></div>
-
-      <div class="window">
-        <div class="title-bar">
-          love alarm.txt
-          <div class="title-bar-controls">
-            <button aria-label="Close">
-              <div class="x-icon"></div>
-            </button>
-          </div>
+  <!-- <div class="Bunny-at-wrap">
+    <img class="" src="" alt="">
+    <div class="window">
+      <div class="title-bar">
+        love alarm.txt
+        <div class="title-bar-controls">
+          <button aria-label="Close">
+            <div class="x-icon"></div>
+          </button>
         </div>
-        take my <heart>heart</heart>
       </div>
+      take my <heart>heart</heart>
+    </div>
+  </div> -->
+
+  <!-- 오르골 -->
+  <div id="orgel-wrap">
+    <div class="orgel img-right">
+      <img class="orgel-img" src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/orgel.png" alt="orgel">
     </div>
   </div>
+
+
+  <!-- 폴라로이드 -->
+  <div id="pola-wrap">
+    <div class="pola-img-wrap img-center">
+      <img class="pola-img" src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/pola-v01.jpg" alt="pola-v01">
+      <img class="pola-right" src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/ribboned-rose.png" alt="ribboned-rose.png">
+    </div>
+  </div>
+
+  <!-- 퍼퓸 -->
+  <div id="perfume-wrap">
+    <div class="perfume-img-wrap img-right">
+      <img class="perfume-img" src="https://raw.githubusercontent.com/bunnyblush/bunny-img-cdn/main/homepage/mainpage/perfume.png" alt="Dior-perfume">
+      <!-- <img class="pola-left" src="" alt="ribboned-rose.png"> -->
+    </div>
+  </div>
+  
 
   <!-- 하트 메뉴 -->
-  <div id="invu-con">
-    <!-- <div class="Bunny-png"></div> -->
-
+  <!-- <div id="invu-con">
     <div class="badgee" style="display: none">
-      <span class="fad fa-badge"></span>
+      <li class="fad fa-badge"></li>
     </div>
     <div class="fil" style="display: none">
       <div class="img"></div>
@@ -924,26 +1104,23 @@
     <div class="option">
       <div class="description">
         <a href="https://bunnyblush.imweb.me/New">
-          <b><span class="fad fa-sparkles"></span></b> New
+          <b><li class="fad fa-sparkles"></li></b> New
         </a>
       </div>
       <div class="description">
         <a href="https://bunnyblush.imweb.me/All">
-          <b><span class="fad fa-heart"></span></b> Shop
+          <b><li class="fad fa-heart"></li></b> Shop
         </a>
       </div>
       <div class="description">
         <a href="https://bunnyblush.imweb.me/Our-Story">
-          <b><span class="fa-solid fa-book-open"></span></b> Our story
+          <b><li class="fa-solid fa-book-open"></li></b> Our story
         </a>
       </div>
       <div class="description">
         <a href="https://bunnyblush.imweb.me/Notice">
-          <b><span class="fa-solid fa-comment"></span></b> Notice
+          <b><li class="fa-solid fa-comment"></li></b> Notice
         </a>
       </div>
-      <!-- <div class="description"><b><span class="fad fa-user"></span></b> twenty-five</div> -->
     </div>
-    <div class="hearteu"><i class="cp cp-heart"></i></div>
-  </div>
-</div>
+  </div> -->
