@@ -25,17 +25,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="https://bemybunny.github.io/bunny-cdn/_meta_img/icons/icon-192.png">
 
 <!-- Manifest & PWA -->
-<link rel="manifest" href="https://bemybunny.github.io/bunny-cdn/_meta_img/webapp/manifest.json">
+<link rel="manifest" href="https://github.com/bemybunny/bunny-code-cdn/blob/main/code/meta/manifest.json">
 <meta name="theme-color" content="#fef9fa">
-
-<!-- 웹앱 서비스 워커 등록 -->
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('https://bemybunny.github.io/bunny-cdn/_meta_img/webapp/sw.js')
-      .then(reg => console.log('Service Worker registered'))
-      .catch(err => console.error('Service Worker error:', err));
-  }
-</script>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
