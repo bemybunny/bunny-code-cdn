@@ -2,10 +2,9 @@
   "name": "Bunny Blush ♥ Be my bunny",
   "short_name": "Bunny Blush",
   "start_url": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#fef9fa",
   "theme_color": "#fef9fa",
-  "description": "사랑스러운 무드를 담은 Bunny Blush의 첫 번째 드롭, Be my bunny",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/bemybunny/bunny-img-cdn/main/_meta_img/icons/icon-192.png",
